@@ -1,0 +1,104 @@
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>TaskSky</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://kit.fontawesome.com/98f550bff7.js"></script>
+</head>
+<body>
+	<section id="header">
+		<nav class="topMenu">
+			<div class="logo">
+			<i class="fa fa-bars"></i>
+			<h1>TaskSky</h1>
+		</div>
+			<div class="search">
+				<i class="fa fa-search"></i>
+				<input placeholder="Search for task..."></input>
+			</div>
+			<div class="bell">
+				<i class="fa fa-bell"></i>
+			</div>
+			<div class="user">
+				<p>M. Thompson</p>
+				<i class="fas fa-user-circle"></i>
+			</div>
+		</nav>
+	</section>
+	<section id="side">
+		<nav class="sideMenu">
+			<div>
+				<i class="fas fa-user-friends"></i>
+				<p>Manage</p>
+			</div>
+			<div class="active">
+				<i class="fa fa-tasks"></i>
+				<p>Task</p>
+			</div>
+			<div>
+				<i class="fa fa-calendar"></i>
+				<p>Schedule</p>
+			</div>
+			<div>
+				<i class="fas fa-chart-bar"></i>
+				<p>Reports</p>
+			</div>
+			<div>
+				<i class="fas fa-cog"></i>
+				<p>Settings</p>
+			</div>
+		</nav>
+	</section>
+	<section id="main">
+		<div class="content">
+			<h2>Tasks</h2>
+			<div class="cards">
+				<div class="card cardBacklog">
+	                <h3>Backlog</h3>
+	                <div id="tareasBacklog">
+
+	                </div>
+	                <div class="btn">
+	                	<button onclick="clonarUltimaTarea(tareasBacklog)" class="add">Add task <i class="fas fa-plus-circle"></i></button>	                	
+	                </div>
+          	 	</div>
+          	 	<div class="card cardInProgress">
+	                <h3>In Progress</h3>	              
+                	<div id="tareasInProgress">
+
+	                </div>
+	                <div class="btn">
+	                	<button onclick="clonarUltimaTarea(tareasInProgress)" class="add">Add task <i class="fas fa-plus-circle"></i></button>	                	
+	                </div>
+          	 	</div>
+				<div class="card cardReview">
+	                <h3>Review</h3>
+	                <div id="tareasReview">
+
+	                </div>
+		            <div class="btn">
+		               	<button onclick="clonarUltimaTarea(tareasReview)" class="add">Add task <i class="fas fa-plus-circle"></i></button>	                	
+		             </div>	                
+          	 	</div>
+          	 	<div class="card carCompleted">
+	                <h3>Complete</h3>
+	             	<div id="tareasCompleted">
+
+	                </div>
+		            <div class="btn">
+		               	<button onclick="clonarUltimaTarea(tareasCompleted)" class="add">Add task <i class="fas fa-plus-circle"></i></button>                	
+		             </div>
+	            </div>
+			</div>
+		</div>
+	</section>
+
+	<div class="addTarea">
+		<i class="fas fa-plus-circle"></i>
+	</div>
+
+	<script src="js/scripts.js"></script>
+
+</body>
+
+

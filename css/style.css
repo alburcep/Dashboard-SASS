@@ -1,0 +1,318 @@
+body {
+  font-family: Arial;
+  color: #70708f;
+  display: grid;
+  grid-template-areas: "header header header header" "side main main main";
+  grid-template-columns: 10% 70% 5% 15%;
+  margin: 0;
+  background-color: #eef2f9;
+}
+
+#header {
+  grid-area: header;
+}
+
+#side {
+  grid-area: side;
+}
+
+#main {
+  grid-area: main;
+}
+
+.topMenu {
+  display: grid;
+  grid-template-columns: 10% 70% 5% 15%;
+  background-color: #878ddb;
+  background-image: linear-gradient(to right, #878ddb, #6fb1f8);
+  color: white;
+}
+.topMenu .logo {
+  padding: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #878ddb;
+  font-weight: bold;
+}
+.topMenu .logo h1 {
+  margin: 0em;
+}
+.topMenu .logo .fa-bars {
+  display: none;
+  cursor: pointer;
+}
+.topMenu .search {
+  padding: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 1em;
+  justify-content: left;
+  border-right: 0.5px solid #eef2f9;
+}
+.topMenu .search input {
+  margin-left: 1em;
+  color: white;
+  border: transparent;
+  background-color: transparent;
+  outline: none;
+}
+.topMenu .search input:focus {
+  color: white;
+}
+.topMenu .search input::placeholder {
+  color: white;
+}
+.topMenu .bell {
+  padding: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topMenu .user {
+  padding: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 0.5px solid #eef2f9;
+}
+.topMenu .user p {
+  font-size: 0.8em;
+  margin-right: 0.5em;
+}
+.topMenu .user .fas {
+  font-size: 1.5em;
+}
+
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  box-shadow: 1px 0 5px 0px #9f9f9f;
+  height: 90vh;
+}
+.sideMenu .fa, .sideMenu .fas {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.sideMenu p {
+  cursor: pointer;
+  margin: 0.5em 0 0 0;
+  font-size: 0.8em;
+}
+.sideMenu div {
+  padding: 1em 0 1em 0;
+  color: #cacfd6;
+}
+.sideMenu .active {
+  border-left: 3px solid #878ddb;
+  color: #70708f;
+}
+.sideMenu .active .fa {
+  color: #878ddb;
+}
+.sideMenu div:nth-last-child(2) {
+  flex-grow: 1;
+}
+
+.content {
+  padding: 1em;
+}
+.content h2 {
+  margin-left: 0.5em;
+  font-weight: normal;
+}
+.content h3 {
+  font-weight: normal;
+}
+.content .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.content .card {
+  margin: 0.8em;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  box-shadow: 0 0 13px -6px rgba(0, 0, 0, 0.4);
+}
+.content .card p {
+  margin-bottom: 1.5em;
+}
+.content .card .btn {
+  text-align: center;
+}
+.content .card .btn .add {
+  margin-top: 1.5em;
+  border-width: 0px;
+  background: transparent;
+  color: #9495ac;
+  cursor: pointer;
+}
+.content .card .btn .add:hover {
+  color: #a3b8de;
+}
+.content .card .btn .add:focus {
+  outline: none;
+}
+.content .cardBacklog {
+  border-top: medium solid #ca7deb;
+}
+.content .cardBacklog .fa-user-circle {
+  color: #ca7deb;
+}
+.content .cardBacklog .priority {
+  background-image: linear-gradient(to right, #ca7deb, #df758e);
+}
+.content .cardInProgress {
+  border-top: medium solid #f09583;
+}
+.content .cardInProgress .fa-user-circle {
+  color: #f09583;
+}
+.content .cardInProgress .priority {
+  background-image: linear-gradient(to right, #f09583, #f3b54d);
+}
+.content .cardReview {
+  border-top: medium solid #9da6fc;
+}
+.content .cardReview .fa-user-circle {
+  color: #9da6fc;
+}
+.content .cardReview .priority {
+  background-image: linear-gradient(to right, #9da6fc, #6db2f7);
+}
+.content .carCompleted {
+  border-top: medium solid #7fd5aa;
+}
+.content .carCompleted .fa-user-circle {
+  color: #7fd5aa;
+}
+.content .carCompleted .priority {
+  background-image: linear-gradient(to right, #7fd5aa, #81d5ed);
+}
+
+.tarea {
+  padding: 0.4em;
+  margin-top: 0.6em;
+  border-radius: 0.3em;
+  text-align: left;
+  background-color: white;
+}
+.tarea .priority {
+  font-size: 0.8em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.2em 1em 0.2em 1em;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.tarea .backlogColor {
+  background-image: linear-gradient(to right, #ca7deb, #df758e);
+}
+.tarea .backInProgressColor {
+  background-image: linear-gradient(to right, #f09583, #f3b54d);
+}
+.tarea .backReviewColor {
+  background-image: linear-gradient(to right, #9da6fc, #6db2f7);
+}
+.tarea .backCompleteColor {
+  background-image: linear-gradient(to right, #7fd5aa, #81d5ed);
+}
+.tarea .icons {
+  display: flex;
+  align-items: center;
+}
+.tarea .icons div {
+  margin-right: 0.8em;
+}
+.tarea .icons div:last-child {
+  margin-left: auto;
+  margin-right: 0em;
+}
+.tarea .icons .fa-comment-alt, .tarea .icons .fa-paperclip, .tarea .icons p {
+  font-size: 0.8em;
+  color: #cacfd6;
+  margin-right: 0.3em;
+}
+.tarea .icons .fa-user-circle {
+  font-size: 1.8em;
+}
+
+.addTarea {
+  position: fixed;
+  bottom: 10;
+  right: 10;
+  font-size: 2.6em;
+  cursor: pointer;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+
+/* Stack the layout on medium devices */
+@media all and (max-width: 1024px) {
+  .content .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .addTarea {
+    bottom: 5;
+    right: 5;
+    font-size: 2em;
+  }
+}
+/* Stack the layout on tablet */
+@media all and (max-width: 870px) {
+  .topMenu {
+    grid-template-columns: 15% 50% 10% 25%;
+  }
+
+  .content .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .addTarea {
+    bottom: 5;
+    right: 5;
+    font-size: 2em;
+  }
+}
+/* Stack the layout on small devices */
+@media all and (max-width: 550px) {
+  body {
+    grid-template-areas: "header header header header" "main main main main";
+  }
+
+  #side {
+    display: none;
+  }
+
+  .topMenu {
+    grid-template-columns: 40% 20% 20% 20%;
+  }
+  .topMenu .logo {
+    justify-content: space-evenly;
+  }
+  .topMenu .logo .fa-bars {
+    display: flex;
+  }
+  .topMenu .search {
+    justify-content: center;
+  }
+  .topMenu input, .topMenu p {
+    display: none;
+  }
+
+  .content .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .topMenu {
+    grid-template-columns: 40% 20% 20% 20%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

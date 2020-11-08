@@ -1,0 +1,22 @@
+body {
+  font-family: $mainFont;
+  color: $fontColor;
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "side main main main";
+  grid-template-columns: 10% 70% 5% 15%;
+  margin: 0;
+  background-color: $MainBgColor;
+}
+
+#header {
+  grid-area: header;
+}
+#side{
+  grid-area: side;
+}
+#main {
+  grid-area: main;
+}
+

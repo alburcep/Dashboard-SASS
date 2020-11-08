@@ -1,0 +1,28 @@
+$mainFont: Arial;
+$fontColor: #70708f;
+
+$colorMenu1: #878ddb;
+$colorMenu2: #6fb1f8;
+$MainBgColor: #eef2f9;
+$SideBgColor: white;
+$noActivo: #cacfd6;
+
+$mediaMedium: 1024px;
+$mediaTablet: 870px;
+$mediaMovil: 550px;
+
+$BacklogCard1: #ca7deb;
+$BacklogCard2: #df758e;
+$BacklogCard: linear-gradient(to right, $BacklogCard1 , $BacklogCard2);
+
+$InProgressCard1: #f09583;
+$InProgressCard2: #f3b54d;
+$InProgressCard: linear-gradient(to right, $InProgressCard1 , $InProgressCard2);
+
+$ReviewCard1: #9da6fc; 
+$ReviewCard2: #6db2f7; 
+$ReviewCard: linear-gradient(to right, $ReviewCard1 , $ReviewCard2);
+
+$CompleteCard1: #7fd5aa;
+$CompleteCard2: #81d5ed;
+$CompleteCard: linear-gradient(to right, $CompleteCard1 , $CompleteCard2);
